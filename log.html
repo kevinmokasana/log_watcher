@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Project</h1>
+    <pre id = "log"></pre>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+    let socket = io();
+    let logElement = document.getElementById('log');
+
+    socket.on('initiallog',(data)=> {
+        logElement.textContent = data.join('\n') + '\n';
+    })
+
+    socket.on('updatelog',(data)=>{
+        console.log(data);
+        logElement.textContent += data.join('\n') + '\n'
+    })
+    </script>
+</body>
+</html>
