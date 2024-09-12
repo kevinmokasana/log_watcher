@@ -8,7 +8,6 @@ const { Server } = require('socket.io');
 let PORT = 3000
 let FILE_PATH = path.join(__dirname,'logfile.log')
 
-
 const server = app.listen(PORT,()=>{
     console.log(`Server is running on ${PORT}`);
 })
