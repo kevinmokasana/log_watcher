@@ -34,7 +34,7 @@ function setLastTenLines(){
     fs.readFile(FILE_PATH, 'utf8', (err, data) => {
         if (err) {
           console.error(err);
-          console.log('moto');
+          console.log('moto-gp');
           return;
         }
         // console.log(data);
