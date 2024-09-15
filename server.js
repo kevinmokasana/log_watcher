@@ -48,6 +48,7 @@ function setLastTenLines(){
 }
 
 
+
 //To initialize file_watcher only once
 //As soon as file updated watcher will emit updated data
 let flag_watcher = false;
