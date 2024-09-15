@@ -13,7 +13,9 @@ const server = app.listen(PORT,()=>{
     console.log(`Server is running on ${PORT}`);
 })
 
+
 const io = new Server(server);
+
 
 let lastTenLinesQueue = []
 
@@ -23,6 +25,7 @@ function updateLastLineQueue(line){
         lastTenLinesQueue.shift()
     }
     lastTenLinesQueue.push(line)
+    console.log('hello');
 }
 
 //Set line 10 lines in queue Globally
@@ -31,6 +34,7 @@ function setLastTenLines(){
     fs.readFile(FILE_PATH, 'utf8', (err, data) => {
         if (err) {
           console.error(err);
+          console.log('moto');
           return;
         }
         // console.log(data);
